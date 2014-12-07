@@ -283,7 +283,7 @@ and other countries. Trademarks of QUALCOMM Incorporated are used with permissio
 
 // load the data associated to the trackers
 - (bool) doLoadTrackersData {
-    return [self loadAndActivateImageTrackerDataSet:@"StonesAndChips.xml"];
+    return [self loadAndActivateImageTrackerDataSet:@"Treetarget.xml"];
 }
 
 // start the application trackers

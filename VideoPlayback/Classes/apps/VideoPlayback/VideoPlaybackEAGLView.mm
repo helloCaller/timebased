@@ -431,10 +431,11 @@ namespace {
         // VideoPlayerHelper to use for current target
         int playerIndex = 0;    // stones
         
-        if (strcmp(imageTarget.getName(), "chips") == 0)
-        {
-            playerIndex = 1;
-        }
+       // if (strcmp(imageTarget.getName(), "chips") == 0)
+        
+//        {
+//            playerIndex = 1;
+//        }
         
         // Mark this video (target) as active
         videoData[playerIndex].isActive = YES;

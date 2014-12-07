@@ -64,6 +64,8 @@
 		18F7950A17F7305500C6A8DA /* VideoPlaybackEAGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 18F7950717F7305500C6A8DA /* VideoPlaybackEAGLView.mm */; };
 		18F7950B17F7305500C6A8DA /* VideoPlaybackViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 18F7950917F7305500C6A8DA /* VideoPlaybackViewController.mm */; };
 		18F7951017F731D200C6A8DA /* VP_about.html in Resources */ = {isa = PBXBuildFile; fileRef = 18F7950F17F731D200C6A8DA /* VP_about.html */; };
+		CB6F7E2A1A35121800840C53 /* Treetarget.dat in Resources */ = {isa = PBXBuildFile; fileRef = CB6F7E281A35121800840C53 /* Treetarget.dat */; };
+		CB6F7E2B1A35121800840C53 /* Treetarget.xml in Resources */ = {isa = PBXBuildFile; fileRef = CB6F7E291A35121800840C53 /* Treetarget.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -142,6 +144,8 @@
 		18F7950817F7305500C6A8DA /* VideoPlaybackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlaybackViewController.h; sourceTree = "<group>"; };
 		18F7950917F7305500C6A8DA /* VideoPlaybackViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoPlaybackViewController.mm; sourceTree = "<group>"; };
 		18F7950F17F731D200C6A8DA /* VP_about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = VP_about.html; sourceTree = "<group>"; };
+		CB6F7E281A35121800840C53 /* Treetarget.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Treetarget.dat; sourceTree = "<group>"; };
+		CB6F7E291A35121800840C53 /* Treetarget.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Treetarget.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -336,6 +340,8 @@
 		18F7950E17F731D200C6A8DA /* VideoPlayback */ = {
 			isa = PBXGroup;
 			children = (
+				CB6F7E281A35121800840C53 /* Treetarget.dat */,
+				CB6F7E291A35121800840C53 /* Treetarget.xml */,
 				185993FE17FB67AF00D5A49F /* icon_error.png */,
 				185993FF17FB67AF00D5A49F /* icon_loading.png */,
 				1859940017FB67AF00D5A49F /* icon_play.png */,
@@ -413,6 +419,7 @@
 			files = (
 				18F7949317F720CB00C6A8DA /* InfoPlist.strings in Resources */,
 				18F7949B17F720CB00C6A8DA /* Default.png in Resources */,
+				CB6F7E2B1A35121800840C53 /* Treetarget.xml in Resources */,
 				18F7949D17F720CB00C6A8DA /* Default@2x.png in Resources */,
 				18F7949F17F720CB00C6A8DA /* Default-568h@2x.png in Resources */,
 				18F794B417F7223B00C6A8DA /* app_icon_iPad.png in Resources */,
@@ -433,6 +440,7 @@
 				1859940A17FB67AF00D5A49F /* icon_loading.png in Resources */,
 				1859940B17FB67AF00D5A49F /* icon_play.png in Resources */,
 				1859940C17FB67AF00D5A49F /* start_large_press.png in Resources */,
+				CB6F7E2A1A35121800840C53 /* Treetarget.dat in Resources */,
 				1859940D17FB67AF00D5A49F /* start_large.png in Resources */,
 				1859940E17FB67AF00D5A49F /* start_medium_press.png in Resources */,
 				1859940F17FB67AF00D5A49F /* start_medium.png in Resources */,
@@ -547,6 +555,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 9;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VideoPlayback/VideoPlayback-Prefix.pch";
@@ -555,6 +564,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = ../../build/lib/arm;
 				PRODUCT_NAME = VidPlayback;
+				PROVISIONING_PROFILE = "";
 				VERSIONING_SYSTEM = "apple-generic";
 				WRAPPER_EXTENSION = app;
 			};
@@ -570,6 +580,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 9;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VideoPlayback/VideoPlayback-Prefix.pch";
@@ -578,6 +589,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = ../../build/lib/arm;
 				PRODUCT_NAME = VidPlayback;
+				PROVISIONING_PROFILE = "";
 				VERSIONING_SYSTEM = "apple-generic";
 				WRAPPER_EXTENSION = app;
 			};
