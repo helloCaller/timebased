@@ -540,10 +540,15 @@ namespace {
             QCAR::Matrix44F modelViewProjectionVideo;
             
 //            SampleApplicationUtils::translatePoseMatrix(0.0f, 0.0f, videoData[playerIndex].targetPositiveDimensions.data[0],
-//                                             &modelViewMatrixVideo.data[0]);
+//                                            &modelViewMatrixVideo.data[0]);
+            SampleApplicationUtils::translatePoseMatrix(0.0f, 0.0f, 80.0f,
+                                            &modelViewMatrixVideo.data[0]);
             
-            SampleApplicationUtils::scalePoseMatrix(videoData[playerIndex].targetPositiveDimensions.data[0],
-                                         videoData[playerIndex].targetPositiveDimensions.data[0] * aspectRatio,
+            SampleApplicationUtils::rotatePoseMatrix(90.0f, 1.0f, 0.0f, 0.0f,
+                                                     &modelViewMatrixVideo.data[0]);
+            
+            SampleApplicationUtils::scalePoseMatrix(videoData[playerIndex].targetPositiveDimensions.data[0] * 1.0f,
+                                         videoData[playerIndex].targetPositiveDimensions.data[0] * aspectRatio * 1.0f,
                                          videoData[playerIndex].targetPositiveDimensions.data[0],
                                          &modelViewMatrixVideo.data[0]);
             
