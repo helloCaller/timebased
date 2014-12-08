@@ -202,10 +202,10 @@ namespace {
         
         switch (i) {
             case 0:
-            filename = @"VuforiaSizzleReel_1.m4v";
+            filename = @"TEST-transcoded.m4v";
             break;
             default:
-            filename = @"VuforiaSizzleReel_2.m4v";
+            filename = @"TEST-transcoded.m4v";
             break;
         }
         
@@ -539,6 +539,10 @@ namespace {
             QCAR::Matrix44F modelViewMatrixVideo = QCAR::Tool::convertPose2GLMatrix(trackablePose);
             QCAR::Matrix44F modelViewProjectionVideo;
             
+            glDepthFunc(GL_LEQUAL);
+            glEnable(GL_BLEND);
+            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+            
 //            SampleApplicationUtils::translatePoseMatrix(0.0f, 0.0f, videoData[playerIndex].targetPositiveDimensions.data[0],
 //                                            &modelViewMatrixVideo.data[0]);
             SampleApplicationUtils::translatePoseMatrix(0.0f, 0.0f, 80.0f,
@@ -575,6 +579,10 @@ namespace {
             glDisableVertexAttribArray(vertexHandle);
             glDisableVertexAttribArray(normalHandle);
             glDisableVertexAttribArray(textureCoordHandle);
+            
+            
+            glDepthFunc(GL_LESS);
+            glDisable(GL_BLEND);
             
             glUseProgram(0);
         }
@@ -717,7 +725,7 @@ namespace {
 - (void)initShaders
 {
     shaderProgramID = [SampleApplicationShaderUtils createProgramWithVertexShaderFileName:@"Simple.vertsh"
-                                                   fragmentShaderFileName:@"Simple.fragsh"];
+                                                   fragmentShaderFileName:@"KeyingShader.fragsh"];
 
     if (0 < shaderProgramID) {
         vertexHandle = glGetAttribLocation(shaderProgramID, "vertexPosition");
