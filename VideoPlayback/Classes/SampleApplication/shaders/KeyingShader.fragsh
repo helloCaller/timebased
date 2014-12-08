@@ -1,0 +1,23 @@
+/*==============================================================================
+ Copyright (c) 2012 QUALCOMM Austria Research Center GmbH.
+ All Rights Reserved.
+ Qualcomm Confidential and Proprietary
+ ==============================================================================*/
+
+precision mediump float;
+varying vec2 texCoord;
+
+uniform sampler2D texSampler2D;
+
+void main()
+{
+    vec3 keyingColor = vec3(0,0.8,0);
+    float thresh = 0.8;
+    float slope = 0.2;
+    vec3 inputColor = texture2D(texSampler2D, texCoord).rgb;
+    float d = abs(length(abs(keyingColor.rgb - inputColor.rgb)));
+    float edge0 = thresh * (1.0 - slope);
+    float alpha = smoothstep(edge0, thresh, d);
+    gl_FragColor = vec4(inputColor, alpha);
+    //gl_FragColor = texture2D(texSampler2D, texCoord);
+}
